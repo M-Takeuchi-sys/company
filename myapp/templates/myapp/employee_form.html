@@ -1,0 +1,17 @@
+<h2>登録ページ</h2>
+
+<form action="" method="post">
+    {% csrf_token %}
+    <p>社員名</p>
+    {{ form.name }}
+    <br>
+    <p>所属部署</p>
+    {{ form.department }}
+    <br>
+    <p>入社日
+    </p>
+    {{ form.hire_date }}
+    <br>
+
+    <button type="submit">保存</button>
+</form>
