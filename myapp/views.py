@@ -1,6 +1,6 @@
 from django.shortcuts import render, resolve_url
 from django.http import HttpResponse
-from django.views.generic import TemplateView, CreateView, DetailView, UpdateView
+from django.views.generic import TemplateView, CreateView, DetailView, UpdateView, DeleteView
 from .models import Employee
 from django.urls import reverse_lazy
 from .forms import EmployeeForm
@@ -33,3 +33,10 @@ class EmployeeUpdate(UpdateView):
     def get_success_url(self):
         messages.info(self.request, '社員情報を更新しました。')
         return resolve_url('myapp:employee_detail', pk=self.kwargs['pk'])
+
+class EmployeeDelete(DeleteView):
+    model = Employee
+
+    def get_success_url(self):
+        messages.info(self.request, '社員情報を削除しました。')
+        return resolve_url('myapp:index')
