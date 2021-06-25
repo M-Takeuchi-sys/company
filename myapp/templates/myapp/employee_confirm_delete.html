@@ -1,0 +1,13 @@
+<h2>削除</h2>
+
+<form method="post">
+  {% csrf_token %}
+  <p>以下の内容を本当に削除しますか？</p>
+  <input type="submit" value="削除する">
+</form>
+
+<p>{{ object.name }}</p>
+
+<p>{{ object.get_department_display }}</p>
+
+<p>{{ object.hire_date }}</p>
