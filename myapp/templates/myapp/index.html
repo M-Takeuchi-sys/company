@@ -19,12 +19,12 @@
   </head>
   <body>
     <!-- Start your project here-->
-    <a href=""><button type="submit">登録</button></a>
+    <a href="{% url 'myapp:employee_create' %}"><button type="submit">登録</button></a>
 
     {% for item in employee_list %}
 
       <p>{{ item.id }}　{{ item.name }}</p>
-
+      <a href="{% url 'myapp:employee_detail' item.id %}">もっと見る</a>
     {% endfor %}
     <!-- End your project here-->
 
