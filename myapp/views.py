@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from django.views.generic import TemplateView, CreateView
+from django.views.generic import TemplateView, CreateView, DetailView
 from .models import Employee
 from django.urls import reverse_lazy
 from .forms import EmployeeForm
@@ -21,3 +21,6 @@ class EmployeeCreate(CreateView):
     model = Employee
     form_class = EmployeeForm
     success_url = reverse_lazy('myapp:index')
+
+class EmployeeDetail(DetailView):
+    model = Employee
