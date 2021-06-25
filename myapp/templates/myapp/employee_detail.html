@@ -1,3 +1,9 @@
+{% if messages %}
+  {% for message in messages %}
+    {{ message }}
+  {% endfor %}
+{% endif %}
+
 <h2>詳細</h2>
 
 <p>{{ object.name }}</p>
@@ -5,3 +11,5 @@
 <p>{{ object.get_department_display }}</p>
 
 <p>{{ object.hire_date }}</p>
+
+<a href="{% url 'myapp:employee_update' object.id %}">更新</a>
