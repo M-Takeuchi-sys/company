@@ -19,9 +19,11 @@
   </head>
   <body>
     <!-- Start your project here-->
+    <a href=""><button type="submit">登録</button></a>
+
     {% for item in employee_list %}
 
-      <p>{{ item.name }}</p>
+      <p>{{ item.id }}　{{ item.name }}</p>
 
     {% endfor %}
     <!-- End your project here-->
