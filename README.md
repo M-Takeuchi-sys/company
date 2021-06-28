@@ -13,5 +13,5 @@ python manage.py makemigrations myapp
 4. データベースを反映させる  
 python manage.py migrate
 
-以上でローカル環境で動作確認できました。  
+以上でローカル環境にて動作確認できました。  
 出来なかった場合、再度ご報告お願いいたします。
