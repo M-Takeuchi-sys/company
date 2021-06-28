@@ -1,4 +1,4 @@
-Python version 3.8.8
+Python version 3.8.8  
 Django version 3.0.5
 
 1. git cronする  
@@ -10,7 +10,7 @@ python manage.py migrate
 3. migrationを作成する  
 python manage.py makemigrations myapp
 
-4.データベースを反映させる  
+4. データベースを反映させる  
 python manage.py migrate
 
 以上でローカル環境で動作確認できました。  
